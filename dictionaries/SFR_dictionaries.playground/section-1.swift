@@ -17,18 +17,25 @@ var swift_refrigerator = [String: String]()
 swift_refrigerator["milk"] = "2%"
 swift_refrigerator.updateValue("1%", forKey: "milk")
 
-var another_swift_refrigerator = [String: String]()
-let milk_optional = another_swift_refrigerator.updateValue("2%", forKey: "milk")
-print("\(_stdlib_getDemangledTypeName(milk_optional))") //Swift.Optional
+var swift_refrigerator2 = [String: String]()
+let food = swift_refrigerator2.updateValue("2%", forKey: "milk")
+print("\(_stdlib_getDemangledTypeName(food))")
+//Swift.Optional
+
+var depleting_refrigerator = ["milk":"2%"]
+let milkless = depleting_refrigerator.removeValueForKey("milk")
+print("\(_stdlib_getDemangledTypeName(milkless))")
 
 var eggless_refrigerator = ["milk":"2%"]
-let eggless_optional = eggless_refrigerator.removeValueForKey("eggs")
-print("\(_stdlib_getDemangledTypeName(eggless_optional))") //Swift.Optional
+let hungry = eggless_refrigerator.removeValueForKey("eggs")
+print("\(_stdlib_getDemangledTypeName(hungry))")
 
-let best_pictures = [1973:"The Godfather", 1989:"Rain Man", 1995:"Forrest Gump"]
+let best_pictures = [1973:"The Godfather",
+                     1989:"Rain Man",
+                     1995:"Forrest Gump"]
 
 for (year, title) in best_pictures {
-  println("The award for Best Picture in \(year) went to: \(title)")
+  println("The award for Best Picture in \(year): \(title)")
 }
 
 let roster = ["pitcher": "Justin Verlander", "first base": "Miguel Cabrera"]

@@ -1,4 +1,4 @@
-// Playground - noun: a place where people can play
+//Created by Adam DeLong - 2/25/15
 import Foundation
 
 var swift_dict: Dictionary<String, String>
